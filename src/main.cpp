@@ -3,6 +3,6 @@
 #include <vector>
 
 int main() {
-    const std::vector<std::string> words{"Hello", "world"};
+    const std::vector<std::string> words = {"Hello", "world"};
     std::cout << words.front() << ", " << words.back() << "!\n";
 }

@@ -24,6 +24,12 @@
             packages = [
               pkgs.gnumake
             ];
+
+            # Interactive nix develop reads ~/.bashrc even with -i. Keep host
+            # SDK include paths from overriding the pinned Nix toolchain.
+            shellHook = ''
+              unset CPPFLAGS C_INCLUDE_PATH
+            '';
           };
         }
       );
